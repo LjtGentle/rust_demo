@@ -1,8 +1,9 @@
-mod guess_game;
 mod comm_concepts;
 mod control_flow;
+mod guess_game;
 mod ownership;
 mod ref_and_borrow;
+mod structure;
 
 fn main() {
     println!("Hello, world!");
@@ -10,8 +11,6 @@ fn main() {
     // comm_concepts::data_type();
     // control_flow::test01();
     // ownership::ownership01();
-    ref_and_borrow::references_and_Bborrowing01();
+    // ref_and_borrow::references_and_Bborrowing01();
+    structure::user_sturct();
 }
-
-
-
