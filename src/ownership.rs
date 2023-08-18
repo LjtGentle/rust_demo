@@ -1,6 +1,6 @@
 pub fn ownership01() {
     // 离开作用域变量失效
-    let s = "hello"; 
+    let s = "hello";
     {
         let s = "hello word";
         println!("s is {s}");
@@ -14,7 +14,7 @@ pub fn ownership01() {
     s.push_str("world");
     println!("mut s is {s}");
     // move test
-    let x= 5;
+    let x = 5;
     let y = x;
     println!("x is {x}");
     println!("y is {y}");
@@ -28,7 +28,7 @@ pub fn ownership01() {
 
     let ss = String::from("ssss");
     takes_ownership(ss);
-    let number:u32 = 19;
+    let number: u32 = 19;
     makes_copy(number);
 
     println!("number is {number}");
@@ -43,25 +43,23 @@ pub fn ownership01() {
     //value borrowed here after move
     // println!("s2:{s2}");
     println!("s3:{s3}");
-
 }
 
 // value borrowed here after move
-fn takes_ownership(s:String){
+fn takes_ownership(s: String) {
     println!("in fn s is {s}");
 }
 
-fn makes_copy(i:u32) {
+fn makes_copy(i: u32) {
     println!("in fn i is {i}");
 }
-
 
 fn give_ownership() -> String {
     let ss = String::from("infnsss");
     ss
 }
 
-fn token_give_ownership(s:String)->String {
+fn token_give_ownership(s: String) -> String {
     println!("in fn s:{s}");
-    return s
+    return s;
 }
