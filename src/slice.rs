@@ -8,7 +8,7 @@ pub fn slice01() {
 
     let s = String::from("hello world");
     // 左闭右开
-    let hello = &s[0..5]; 
+    let hello = &s[0..5];
     let world = &s[6..11];
     println!("hello:{hello},world:{world}");
     let s1 = &s[..5];
@@ -20,13 +20,13 @@ pub fn slice01() {
     // s.clear();
 
     let s = "hello world";
-    let word =  frist_word03(s);
+    let word = frist_word03(s);
     println!("word:{word}");
 }
 
-fn first_word(s:&String) ->usize {
+fn first_word(s: &String) -> usize {
     let bytes = s.as_bytes();
-    for (i,&item) in bytes.iter().enumerate() {
+    for (i, &item) in bytes.iter().enumerate() {
         if item == b' ' {
             return i;
         }
@@ -34,9 +34,9 @@ fn first_word(s:&String) ->usize {
     s.len()
 }
 
-fn first_word02(s:&String) ->&str {
+fn first_word02(s: &String) -> &str {
     let bytes = s.as_bytes();
-    for (i,&item) in bytes.iter().enumerate() {
+    for (i, &item) in bytes.iter().enumerate() {
         if item == b' ' {
             return &s[0..i];
         }
@@ -44,9 +44,9 @@ fn first_word02(s:&String) ->&str {
     &s[..]
 }
 
-fn frist_word03(s:&str) ->&str {
+fn frist_word03(s: &str) -> &str {
     let bytes = s.as_bytes();
-    for (i,&item) in bytes.iter().enumerate() {
+    for (i, &item) in bytes.iter().enumerate() {
         if item == b' ' {
             return &s[0..i];
         }

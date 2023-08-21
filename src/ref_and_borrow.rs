@@ -1,4 +1,5 @@
 // 在任意给定的时候，要么只能有一个可变引用，要么只能有多个不可变引用
+
 pub fn references_and_Bborrowing01() {
     let s = String::from("hello");
     let len = calculate_len(&s);
@@ -63,7 +64,7 @@ fn changeMut(s: &mut String) {
 //     return &s;
 // }
 
-fn no_dangle() ->String {
+fn no_dangle() -> String {
     let s = String::from("hello");
     s
 }
