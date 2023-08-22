@@ -10,6 +10,7 @@ mod structure;
 use restaurant;
 mod collections;
 mod error_handle;
+mod generic_demo;
 
 fn main() {
     // println!("Hello, world!");
@@ -28,5 +29,6 @@ fn main() {
     // match_flow::match01();
     // restaurant::eat_at_restaurant();
     // collections::vector01();
-    error_handle::test01();
+    // error_handle::test01();
+    generic_demo::demo();
 }
