@@ -16,3 +16,5 @@ rand = "0.8.3"
 restaurant = {version="0.1.0",path="./restaurant"}
 
 
+[profile.release]
+panic = 'abort'
