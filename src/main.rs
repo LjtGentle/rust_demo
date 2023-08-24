@@ -9,6 +9,7 @@ mod slice;
 mod structure;
 use restaurant;
 mod collections;
+mod trait_demo;
 
 fn main() {
     // println!("Hello, world!");
@@ -26,5 +27,6 @@ fn main() {
     // structure::user_sturct();
     // match_flow::match01();
     // restaurant::eat_at_restaurant();
-    collections::vector01();
+    // collections::vector01();
+    trait_demo::test01();
 }
