@@ -38,5 +38,4 @@ fn main() {
     // error_handle::test01();
     // generic_demo::demo();
     trait_demo::demo();
-
 }
