@@ -9,6 +9,10 @@ mod slice;
 mod structure;
 use restaurant;
 mod collections;
+
+mod error_handle;
+mod generic_demo;
+
 mod trait_demo;
 
 fn main() {
@@ -28,5 +32,11 @@ fn main() {
     // match_flow::match01();
     // restaurant::eat_at_restaurant();
     // collections::vector01();
-    trait_demo::test01();
+
+    // trait_demo::test01();
+
+    // error_handle::test01();
+    // generic_demo::demo();
+    trait_demo::demo();
+
 }
