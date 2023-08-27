@@ -43,6 +43,17 @@ fn test03() {
     }
 }
 
+fn test04() {
+    let config = Config::new02(env::args()).unwrap_or_else(|err| {
+        // 将错误信息写入标准错误
+        eprintln!("problem parsing args:{}", err);
+        process::exit(1);
+    });
+    if let Err(e) = config.run() {
+        eprintln!("app err:{}", e);
+        process::exit(1);
+    }
+}
 struct Config {
     query: String,
     filename: String,
@@ -63,13 +74,30 @@ impl Config {
             case_sensitive,
         })
     }
+    pub fn new02(mut args: std::env::Args) -> Result<Config, &'static str> {
+        args.next();
+        let query = match args.next() {
+            Some(arg) => arg,
+            None => return Err("Don't get query param"),
+        };
+        let filename = match args.next() {
+            Some(arg) => arg,
+            None => return Err("Don't get filename param"),
+        };
+        let case_sensitive = env::var("CASE_SENSITIVE").is_err();
+        Ok(Config {
+            query,
+            filename,
+            case_sensitive,
+        })
+    }
     pub fn run(&self) -> Result<(), Box<dyn Error>> {
         let contents = fs::read_to_string(self.filename.clone())?;
 
         let result = if self.case_sensitive {
             search(&self.query, &contents)
         } else {
-            search_case_insenitive(&self.query, &contents)
+            search_case_insenitive02(&self.query, &contents)
         };
         for line in result {
             println!("line :{line}");
@@ -100,4 +128,12 @@ pub fn search_case_insenitive<'a>(query: &str, contents: &'a str) -> Vec<&'a str
         }
     }
     result
+}
+
+pub fn search_case_insenitive02<'a>(query: &str, cotents: &'a str) -> Vec<&'a str> {
+    let query = query.to_lowercase();
+    cotents
+        .lines()
+        .filter(|line| line.to_lowercase().contains(&query))
+        .collect()
 }

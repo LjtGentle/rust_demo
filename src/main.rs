@@ -13,6 +13,8 @@ mod collections;
 mod error_handle;
 mod generic_demo;
 
+mod closures;
+mod iterators;
 mod minigrep;
 mod trait_demo;
 
@@ -40,4 +42,6 @@ fn main() {
     // generic_demo::demo();
     // trait_demo::demo();
     minigrep::demo();
+    // closures::closures_demo();
+    // iterators::iterators_demo();
 }
