@@ -13,6 +13,7 @@ mod collections;
 mod error_handle;
 mod generic_demo;
 
+mod minigrep;
 mod trait_demo;
 
 fn main() {
@@ -37,5 +38,6 @@ fn main() {
 
     // error_handle::test01();
     // generic_demo::demo();
-    trait_demo::demo();
+    // trait_demo::demo();
+    minigrep::demo();
 }

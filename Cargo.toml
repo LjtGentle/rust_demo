@@ -19,3 +19,5 @@ adder = {version="0.1.0",path="./adder"}
 
 [profile.release]
 panic = 'abort'
+
+
