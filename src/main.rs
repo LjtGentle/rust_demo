@@ -17,6 +17,7 @@ mod closures;
 mod iterators;
 mod minigrep;
 mod trait_demo;
+mod smart_pointers;
 
 fn main() {
     // println!("Hello, world!");
@@ -41,7 +42,9 @@ fn main() {
     // error_handle::test01();
     // generic_demo::demo();
     // trait_demo::demo();
-    minigrep::demo();
+    // minigrep::demo();
     // closures::closures_demo();
     // iterators::iterators_demo();
+
+    smart_pointers::demo();
 }
