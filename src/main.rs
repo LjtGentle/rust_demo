@@ -16,6 +16,7 @@ mod generic_demo;
 mod closures;
 mod iterators;
 mod minigrep;
+mod smart_pointers;
 mod trait_demo;
 
 fn main() {
@@ -41,7 +42,9 @@ fn main() {
     // error_handle::test01();
     // generic_demo::demo();
     // trait_demo::demo();
-    minigrep::demo();
+    // minigrep::demo();
     // closures::closures_demo();
     // iterators::iterators_demo();
+
+    smart_pointers::demo();
 }
