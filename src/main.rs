@@ -14,6 +14,7 @@ mod error_handle;
 mod generic_demo;
 
 mod closures;
+mod fearless_concurrency;
 mod iterators;
 mod minigrep;
 mod smart_pointers;
@@ -46,5 +47,6 @@ fn main() {
     // closures::closures_demo();
     // iterators::iterators_demo();
 
-    smart_pointers::demo();
+    // smart_pointers::demo();
+    fearless_concurrency::demo();
 }
