@@ -19,6 +19,8 @@ mod iterators;
 mod minigrep;
 mod smart_pointers;
 mod trait_demo;
+mod oop;
+
 
 fn main() {
     // println!("Hello, world!");
@@ -48,5 +50,6 @@ fn main() {
     // iterators::iterators_demo();
 
     // smart_pointers::demo();
-    fearless_concurrency::demo();
+    // fearless_concurrency::demo();
+    oop::demo();
 }
