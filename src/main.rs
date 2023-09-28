@@ -19,7 +19,7 @@ mod iterators;
 mod minigrep;
 mod smart_pointers;
 mod trait_demo;
-mod oop;
+mod oop_demo;
 
 
 fn main() {
@@ -51,5 +51,5 @@ fn main() {
 
     // smart_pointers::demo();
     // fearless_concurrency::demo();
-    oop::demo();
+    oop_demo::demo();
 }
